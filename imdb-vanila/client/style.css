@@ -1,0 +1,99 @@
+body {
+  background: black;
+  font-family: 'Saira', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: 50px repeat(11, 1fr);
+  grid-gap: 1rem;
+  color: black;
+  width: 100%;
+}
+
+.aside {
+  grid-row: 2 / 13;
+  grid-column: 1 / 4;
+}
+.search {
+  grid-row: 1 / 2;
+  grid-column: 4/ 13;
+  margin-top: 20px;
+  width: 150px;
+  transition: width 0.4s ease-in-out;
+  height: 30px;
+}
+
+.search:focus {
+  width: calc(100% - 4px);
+}
+
+.movies-container {
+  grid-row: 2 / 13;
+  grid-column: 4 / 13;
+}
+
+.movies-container {
+  display: grid;
+  padding: 0;
+  margin-top: 10px;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 100%;
+  text-align: center;
+  background: white;
+}
+
+img {
+  width: 80%;
+  margin-bottom: 1em;
+}
+
+.aside {
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+.aside p {
+  margin: 5px;
+  margin-left: 10%;
+}
+
+.aside h3 {
+  margin: 10px;
+  margin-left: 10%;
+}
+
+.filter {
+  float: left;
+  margin-bottom: 0px;
+}
+
+.clear {
+  float: left;
+  margin-top: 0.9em;
+  color: red;
+}
+
+.clearfix {
+  clear: both;
+}
+
+@media (max-width: 960px) {
+  .movies-container {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media (max-width: 640px) {
+  .movies-container {
+    grid-template-columns: 50% 50%;
+  }
+}
