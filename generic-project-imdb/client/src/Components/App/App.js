@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.api = new Api();
-    this.state = { selected: null, data: [] };
+    this.state = { selected: null, data: [{ title: '', imageUrl: '', id: '' }] };
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -20,7 +20,20 @@ class App extends Component {
   }
 
   handleClick(selected) {
-    console.log(selected);
+    let data = this.state.data.map(item => {
+      if (item.id === selected) {
+        return {
+          ...item,
+          selected: 'selected'
+        };
+      } else {
+        return {
+          ...item,
+          selected: ''
+        };
+      }
+    });
+    this.setState({ data });
   }
 
   render() {
@@ -38,3 +51,12 @@ class App extends Component {
 }
 
 export default App;
+
+// handleSubmitReview(review) {
+//   let { reviews } = this.state;
+//   let newReview = JSON.parse(review);
+//   let user_avatar = `https://robohash.org/${faker.lorem.word()}.png?size=100x100&set=set1`;
+//   newReview.user_avatar = user_avatar;
+//   reviews.push(newReview);
+//   this.setState({ reviews });
+// }
