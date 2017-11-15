@@ -12,16 +12,17 @@ class App extends Component {
     this.state = { weather: '' };
     this.api = new Api();
     this.showPosition = this.showPosition.bind(this);
+    this.onLocationSubmit = this.onLocationSubmit.bind(this);
   }
 
   componentWillMount() {
     navigator.geolocation.getCurrentPosition(this.showPosition);
   }
 
-  async getWeather(lat, lon) {
+  async getWeather(lat, lng) {
     try {
       let response = await fetch(
-        `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lon}`
+        `https://fcc-weather-api.glitch.me/api/current?lat=${lat}&lon=${lng}`
       );
       let data = await response.json();
       let location = data.name;
@@ -36,13 +37,17 @@ class App extends Component {
     this.getWeather(position.coords.latitude, position.coords.longitude);
   }
 
+  onLocationSubmit(latLng) {
+    this.getWeather(latLng.lat, latLng.lng);
+  }
+
   render() {
     let { weather, location } = this.state;
 
     return (
       <div className={style.container}>
         <Header />
-        <Aside />
+        <Aside onLocationSubmit={this.onLocationSubmit} />
         <Main weather={weather} location={location} />
         <Footer />
       </div>

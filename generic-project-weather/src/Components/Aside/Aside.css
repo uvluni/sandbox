@@ -1,6 +1,6 @@
 .item {
-  grid-row: 2 / 11;
-  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+  grid-column: 1 / 7;
 }
 
 .aside {
@@ -12,4 +12,8 @@
 
 .aside li {
   list-style: none;
+}
+
+#PlacesAutocomplete__root > input[type='text'] {
+  width: 80px;
 }

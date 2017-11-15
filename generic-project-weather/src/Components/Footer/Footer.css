@@ -1,10 +1,9 @@
 .item {
-    grid-row: 11 / 13 ;
-    grid-column: 1 / 13  ;
+  grid-row: 4 / 5;
+  grid-column: 1 / 13;
 }
 
-.footer{
-    text-align: center;
-    background: green;
+.footer {
+  text-align: center;
+  background: green;
 }
-  
