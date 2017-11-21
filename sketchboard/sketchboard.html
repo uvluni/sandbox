@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sketchboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <h1>Sketch Board</h1>
+        <nav id="navbar">
+            <div id="shapes" class="btncontainer">
+                <p>Shapes</p>
+                <button type="button" id="rectanglebtn">Rectangle</button>
+                <button type="button" id="ovalbtn">Oval</button>
+            </div>
+            <div id="actions" class="btncontainer">
+                <p>Actions</p>
+                <button type="button" id="colorbtn">Color</button>
+                <button type="button" id="deletebtn">Delete</button>
+                <table id="colors">
+                    <tr>
+                        <td class="colorselection" style="background-color:yellow;"></td>
+                        <td class="colorselection" style="background-color:orange;"></td>
+                        <td class="colorselection" style="background-color:red;"></td>
+                    </tr>
+                    <tr>
+                        <td class="colorselection" style="background-color:cyan;"></td>
+                        <td class="colorselection" style="background-color:magenta;"></td>
+                        <td class="colorselection" style="background-color:purple;"></td>
+                    </tr>
+                    <tr>
+                        <td class="colorselection" style="background-color:green;"></td>
+                        <td class="colorselection" style="background-color:blue;"></td>
+                        <td class="colorselection" style="background-color:black;"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="saveload" class="btncontainer">
+                <p>Save / Load</p>
+
+                <button type="button" id="savebtn">Save</button>
+                <button type="button" id="loadbtn">Load</button>
+            </div>
+        </nav>
+    </header>
+
+    <div id="savewindow" class="window">
+        <h1>Save
+            <button class="closewindow">X</button>
+        </h1>
+        <div>
+            <button type="button" id="execsave">Save</button>
+            <input type="text" id="inputsavename" autofocus="true">
+        </div>
+    </div>
+
+    </div>
+    <div id="loadwindow" class="window">
+        <h1>Load
+            <button class="closewindow">X</button>
+        </h1>
+        <div>
+            <button type="button" id="execload">Load</button>
+            <select id="filesinstorage">
+                <option selected disabled>Choose file to load</option>
+            </select>
+            <button type="button" id="execdelete">Delete</button>
+
+        </div>
+    </div>
+    <div id="savesuccessfull" class="window prompt">
+        <h1>Saved Successfully</h1>
+    </div>
+        <div id="loadsuccessfull" class="window prompt">
+        <h1>Loaded Successfully</h1>
+    </div>
+        </div>
+        <div id="deletesuccessfull" class="window prompt">
+        <h1>Deleted Successfully</h1>
+    </div>
+
+    <div id="darkbackground"></div>
+
+    <div id="canvas"></div>
+
+</body>
+<script src="scripts/createshapes.js"></script>
+
+</html>
