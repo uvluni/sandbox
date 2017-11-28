@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
 import style from './Header.css';
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-class Header extends Component {
-  render() {
-    return (
-      <div className={`${style.item} ${style.Header}`}>
-           <h1 className={style.title}>New_Project</h1>
-      </div>
-    );
-  }
-}
+const Header = () => (
+  <header>
+    <h1 className={style.title}>The Movies</h1>
+    <NavLink to="/" activeClassName="is-active" exact={true}>
+      Home
+    </NavLink>
+    <NavLink to="/create" activeClassName="is-active">
+      Create Movie
+    </NavLink>
+    <NavLink to="/help" activeClassName="is-active">
+      Help
+    </NavLink>
+  </header>
+);
 
 export default Header;

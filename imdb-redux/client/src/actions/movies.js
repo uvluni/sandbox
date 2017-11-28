@@ -1,9 +1,12 @@
 import uuid from 'uuid';
+import moment from 'moment';
 
 // ADD_MOVIE
-export const addMovie = ({ description = '', note = '', price = 0, createdAt = 0 } = {}) => ({
+export const addMovie = (
+  { description = '', note = '', price = 0, createdAt = moment() } = {}
+) => ({
   type: 'ADD_MOVIE',
-  expense: {
+  movie: {
     id: uuid(),
     description,
     note,
