@@ -1,10 +1,14 @@
 import React from 'react';
 import style from './Aside.css';
 
-const CardList = ({ data, onClick }) => {
+const CardList = ({ movies, onClick }) => {
   return (
     <ul className={`${style.item} ${style.aside}`}>
-      {data.map(item => <li key={item.id} onClick={() => onClick(item.id)}>{item.title}</li>)}
+      {movies.map(movie => (
+        <li key={movie.id} onClick={() => onClick(movie.id)}>
+          {movie.title}
+        </li>
+      ))}
     </ul>
   );
 };

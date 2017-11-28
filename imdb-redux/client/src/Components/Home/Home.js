@@ -1,53 +1,39 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addMovie } from '../../actions/movies';
+import MoviesList from '../MoviesList/MoviesList';
 import Api from '../Api/Api';
-import style from './Home.css';
-import Aside from '../Aside/Aside';
-import Footer from '../Footer/Footer';
-import CardList from '../CardList/CardList';
+import selectMovies from '../../selectors/movies';
 
 class Home extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.api = new Api();
-    this.state = { selected: null, data: [{ title: '', imageUrl: '', id: '' }] };
-    this.handleClick = this.handleClick.bind(this);
-    console.log('Home loaded');
   }
 
   async componentWillMount() {
-    console.log('componentWillMount', this.state);
-    let data = await this.api.getData();
-    this.setState({ data });
-  }
-
-  handleClick(selected) {
-    let data = this.state.data.map(item => {
-      if (item.id === selected) {
-        return {
-          ...item,
-          selected: 'selected'
-        };
-      } else {
-        return {
-          ...item,
-          selected: ''
-        };
-      }
+    console.log(this.props);
+    console.log('mounted');
+    let movies = await this.api.getMovies();
+    console.log(movies);
+    movies.forEach(({ id, title, price, imageUrl }) => {
+      this.props.dispatch(addMovie({ id, title, price, imageUrl }));
     });
-    this.setState({ data });
   }
 
   render() {
-    let { data } = this.state;
-
     return (
-      <div className={style.container}>
-        <Aside data={data} onClick={this.handleClick} />
-        <CardList data={data} />
-        <Footer />
+      <div>
+        <MoviesList />
       </div>
     );
   }
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    movies: selectMovies(state.movies, state.filters)
+  };
+};
+
+export default connect(mapStateToProps)(Home);

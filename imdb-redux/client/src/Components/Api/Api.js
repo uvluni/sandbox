@@ -1,11 +1,11 @@
-// import data from '../../data/data.json';
+// import movies from '../../movies/movies.json';
 
 export default class Api {
-  async getData() {
+  async getMovies() {
     try {
-      let response = await fetch('http://localhost:9000/data');
-      let data = await response.json();
-      return data;
+      let response = await fetch('http://localhost:9000/movies');
+      let movies = await response.json();
+      return movies;
     } catch (error) {
       console.log(error);
     }

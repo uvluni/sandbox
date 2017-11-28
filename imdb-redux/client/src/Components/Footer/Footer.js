@@ -4,8 +4,8 @@ import style from './Footer.css';
 const Footer = () => {
   return (
     <div className={`${style.item} ${style.footer}`}>
-        <h2>Footer</h2>
-      </div>
+      <h2>Footer</h2>
+    </div>
   );
 };
 

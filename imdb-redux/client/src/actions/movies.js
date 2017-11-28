@@ -3,14 +3,22 @@ import moment from 'moment';
 
 // ADD_MOVIE
 export const addMovie = (
-  { description = '', note = '', price = 0, createdAt = moment() } = {}
+  {
+    id = uuid(),
+    title = '',
+    plot = '',
+    price = 0,
+    imageUrl = 'https://www.equalserving.com/images/es1scplugin/image-not-available.png',
+    createdAt = moment()
+  } = {}
 ) => ({
   type: 'ADD_MOVIE',
   movie: {
-    id: uuid(),
-    description,
-    note,
+    id,
+    title,
+    plot,
     price,
+    imageUrl,
     createdAt
   }
 });
