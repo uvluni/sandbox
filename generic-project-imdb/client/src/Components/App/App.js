@@ -10,7 +10,7 @@ class App extends Component {
   constructor() {
     super();
     this.api = new Api();
-    this.state = { data: [{ title: '', imageUrl: '', id: '' }] };
+    this.state = { data: [{ title:'', imageUrl: '', id: '' }] };
     this.handleClick = this.handleClick.bind(this);
   }
 
