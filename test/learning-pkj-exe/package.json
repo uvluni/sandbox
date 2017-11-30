@@ -8,6 +8,7 @@
     "start": "cross-env NODE_ENV=prod node index.js",
     "dev": "cross-env NODE_ENV=prod nodemon index.js"
   },
+  "bin": "index.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
