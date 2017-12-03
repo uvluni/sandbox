@@ -1,0 +1,31 @@
+.wrapper {
+    width: 1040px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+.header {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.submit-btn {
+    border: 1px solid orange;
+    width: 100px;
+    height: 25px;
+    margin: 5px;
+    background-color: green;
+    color: white;
+    transition: 0.3s all;
+}
+
+.submit-btn:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.field {
+    width: 150px;
+    height: 20px;
+    margin: 5px;
+}

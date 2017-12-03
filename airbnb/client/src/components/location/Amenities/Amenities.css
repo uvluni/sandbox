@@ -1,0 +1,30 @@
+.group {
+    display: flex;
+    border: 1px solid #cad0d2;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    margin: 2em 1em;
+}
+
+.group_amenity {
+    flex: 1 1 0%;
+    border: none;
+    border-radius: 0;
+}
+
+.group_amenity {
+    border-left: 1px solid #d7dbdd;
+}
+
+.group_description {
+    flex: 1 1 auto;
+}
+
+.amenity {
+    padding: 1em;
+}
+
+.description_text {
+    padding-top: 1em;
+}

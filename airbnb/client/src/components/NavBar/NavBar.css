@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #333;
+}
+
+.item:hover {
+    background-color: #333;
+    opacity: 0.5;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.item {
+    color: white;
+    padding: 0.8em;
+    text-decoration: none;
+    transition: 0.3s all;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.logout {
+    background: none;
+    border: none;
+    font-size: 1em;
+}
