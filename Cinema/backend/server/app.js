@@ -15,6 +15,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Routes
-app.use('/api/locations', require('./routes/api/locations'));
+app.use('/api/movies', require('./routes/api/movies'));
 
 module.exports = app;
