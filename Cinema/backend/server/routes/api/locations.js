@@ -3,17 +3,8 @@ const router = express.Router();
 const LocationsController = require('../../controllers/locations');
 
 router
-    .route('/')
-    .get(LocationsController.getLocations)
-    .post(LocationsController.addLocation)
-    .put(() => {})
-    .delete(() => {});
-
-router
-    .route('/:locationId')
-    .get(LocationsController.getLocation)
-    .post(() => {})
-    .put(() => {})
-    .delete(() => {});
+  .route('/')
+  .get(LocationsController.getLocations)
+  .post(LocationsController.addLocation);
 
 module.exports = router;
