@@ -1,0 +1,42 @@
+canvas {
+    background-color: black;
+    display: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #efefef;
+}
+
+#canvas-wrap {
+    width: 90%;
+    margin: auto;
+    margin-top: 3em;
+}
+
+#login {
+    padding: 1em;
+}
+
+.player-name:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 6px #d3d3d3;
+    background-color: rgba(0, 128, 0, 0.32);
+}
+
+.player-name {
+    border: 1px solid rgba(0, 136, 0, 0.30);
+    border-radius: 0.5em;
+    background-color: rgba(0, 170, 0, 0.39);
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.2em 0.6em;
+    margin-left: 1em;
+    display: inline-block;
+    text-align: center;
+}
+
+#loby {
+    padding-left: 1em;
+}

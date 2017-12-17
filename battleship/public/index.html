@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <title>Battleship</title>
+</head>
+
+<body>
+    <div id='game-screen'>
+
+        <div id='login'>
+            <input type="text" id="input-username" name="name" placeholder="Username" required autofocus="true" minlength="4" maxlength="32">
+            <input type="submit" id="submit-username" value="Play">
+        </div>
+
+        <div id='loby'>
+            <h3>Available players</h3>
+        </div>
+
+        <div id="canvas-wrap">
+            <canvas id='my-board'>You do not have Canvas</canvas>
+        </div>
+    </div>
+    </div>
+
+
+    <script src=" /socket.io/socket.io.js"></script>
+    <script src="javascripts/clntComManager.js"></script>
+    <script src="javascripts/clntDrawer.js"></script>
+    <script src="javascripts/clntUsers.js"></script>
+    <script src="javascripts/clntObjCreator.js"></script>
+    <script src="javascripts/clntGame.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
