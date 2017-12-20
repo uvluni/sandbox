@@ -1,0 +1,7 @@
+<article class="tile is-child notification is-dark">
+    <p class="title">Jobs</p>
+    <div class="content">
+        <job-title class="row" clicked="vm.clicked" titles="vm.titles" order="vm.order" reverse="vm.reverse"></job-title>
+        <job ng-repeat="job in vm.allJobs | orderBy:vm.order:vm.reverse" job="job" click-func="vm.applyJob(job._id)" btn-name="'Apply'"></job>
+    </div>
+</article>

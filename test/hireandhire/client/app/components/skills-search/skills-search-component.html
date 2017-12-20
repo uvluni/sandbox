@@ -1,0 +1,8 @@
+<article class="tile is-child notification is-light">
+    <p class="subtitle">Search job by skill</p>
+
+    <!-- <p class="title"></p> -->
+    <!-- <p class="subtitle">Bottom tile</p> -->
+
+    <select id="skills" ng-options="skill as skill.title for skill in vm.allSkills" ng-model="vm.searchSkill" class="dropdown-content"></select>
+</article>

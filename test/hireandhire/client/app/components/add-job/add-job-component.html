@@ -1,0 +1,72 @@
+<article class="tile is-child notification is-light">
+    <messages message="vm.message"></messages>
+    <a ng-click="vm.showModal()" class="subtitle">+ Add Job</a>
+</article>
+
+<div class="modal {{vm.modalActive}}">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Add a new job</p>
+            <button class="delete" aria-label="close" ng-click="vm.hideModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <form ng-submit="vm.addJob()">
+
+                <div class="field">
+                    <label class="label">Job title</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Job title" ng-model="vm.job.title" required>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Job Skills</label>
+                    <div class="control">
+                        <select id="skills" ng-options="skill as skill.title for skill in vm.allSkills" ng-model="vm.job.skill" class="dropdown-content"
+                            required></select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Description</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Description" ng-model="vm.job.description" required>
+                    </div>
+                </div>
+
+                <div class="columns">
+
+                    <div class="column">
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Longitude</label>
+                                <input class="input is-primary" type="number" placeholder="Longitude" ng-model="vm.job.location.lng" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="field">
+                            <div class="control">
+                                <label class="label">Latitude</label>
+                                <input class="input is-primary" type="number" placeholder="Latitude" ng-model="vm.job.location.lat" required>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <footer class="modal-card-foot">
+                    <input class="button is-success" type="submit" id="submit" value="Submit" />
+
+                    <button class="button" ng-click="vm.hideModal()">Cancel</button>
+                </footer>
+
+            </form>
+
+        </section>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="navbar-menu is-primary">
+    <span class="navbar-brand">
+        <img src="http://www.cowcow.com/contents/cowcow/preview/v2/images/logo-cowcow.png">
+    </span>
+
+    <span class="navbar-brand">
+        <a class="navbar-item" ui-sref="home" ui-sref-active="active">Home</a>
+    </span>
+    <span class="navbar-brand">
+            <a ng-hide="!vm.username" class="navbar-item" ui-sref="profile" ui-sref-active="active">Profile</a>
+        </span>
+    <span class="navbar-brand">
+        <a ng-hide="vm.username" class="navbar-item" ui-sref="login" ui-sref-active="active">Login</a>
+    </span>
+    <span class="navbar-brand">
+        <a ng-hide="!vm.username" class="navbar-item" ng-click="vm.logout()" ui-sref-active="active">Logout</a>
+    </span>
+    <p ng-hide="!vm.username" class="navbar-item">{{vm.username}}</p>
+
+</div>

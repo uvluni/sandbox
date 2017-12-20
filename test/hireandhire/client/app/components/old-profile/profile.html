@@ -1,0 +1,47 @@
+<div>
+    <h1>Profile</h1>
+
+    <div>
+        <table id="job-list-table" class="table is-striped is-fullwidth">
+            <thead>
+                <tr class="is-selected">
+                    <th ng-click="vm.sortBy('title')">Job Title
+                        <span class="sortorder" ng-show="vm.propertyName === 'title'" ng-class="{reverse: vm.reverse}"></span>
+                    </th>
+                    <th ng-click="vm.sortBy('publish_date')">Publish Date
+                        <span class="sortorder" ng-show="vm.propertyName === 'publish_date'" ng-class="{reverse: vm.reverse}"></span>
+                    </th>
+                    <th ng-click="vm.sortBy('last_name')">Publisher
+                        <span class="sortorder" ng-show="vm.propertyName === 'last_name'" ng-class="{reverse: vm.reverse}"></span>
+                    </th>
+                    <th ng-click="vm.sortBy('location')">Location
+                        <span class="sortorder" ng-show="vm.propertyName === 'location'" ng-class="{reverse: vm.reverse}"></span>
+                    </th>
+                    <!-- <th>
+                        <select id="skills" ng-options="skill as skill.name for skill in vm.allSkills" ng-model="vm.searchSkill" class="dropdown-content"></select>
+                    </th> -->
+                    <th ng-click="vm.sortBy('description')">Description
+                        <span class="sortorder" ng-show="vm.propertyName === 'description'" ng-class="{reverse: vm.reverse}"></span>
+                    </th>
+                    <!-- <th>
+                    </th> -->
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="job in vm.jobsObj | orderBy:vm.propertyName:vm.reverse | filter:vm.searchSkill.name">
+                    <td>{{job.title}}</td>
+                    <td>{{job.publish_date}}</td>
+                    <td>{{job.last_name + " " + job.first_name}}</td>
+                    <td>{{job.location}}</td>
+                    <!-- <td><span class="skill" ng-repeat="skill in job.skills ">{{skill}}</span></td> -->
+                    <td><span>{{job.description}}</span></td>
+                    <!-- <td><button class="button" ng-disabled="job.applied" ng-click="vm.applyByJobAndUserId(job.id); job.applied='applied'">Apply</button></td> -->
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+</div>
