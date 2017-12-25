@@ -1,6 +1,6 @@
 var products = [{
         "image": "https://robohash.org/sitmolestiasmaxime.png?size=100x100&set=set1",
-        "name": "Symphy",
+        "name": "Symph",
         "price": 19.99
     },
     {
