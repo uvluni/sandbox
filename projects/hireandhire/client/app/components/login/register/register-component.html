@@ -1,0 +1,80 @@
+<div>
+    <messages message="vm.message"></messages>
+
+    <a ng-click="vm.showModal()">Register</a>
+
+    <div class="modal {{vm.modalActive}}">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">New user registration</p>
+                <button class="delete" aria-label="close" ng-click="vm.hideModal()"></button>
+            </header>
+            <section class="modal-card-body">
+                <form ng-submit="vm.addUser()">
+                    <div class="field">
+                        <label class="label">First Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="First Name" ng-model="vm.user.name.first" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Last Name</label>
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Last Name" ng-model="vm.user.name.last" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Email Address</label>
+                        <div class="control">
+                            <input class="input" type="mail" placeholder="Email" ng-model="vm.user.email" required>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input class="input" type="password" placeholder="Password" ng-model="vm.user.password" required>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="label">Longitude</label>
+                                    <input class="input is-primary" type="number" placeholder="Longitude" ng-model="vm.user.location.lng" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <div class="control">
+                                    <label class="label">Latitude</label>
+                                    <input class="input is-primary" type="number" placeholder="Latitude" ng-model="vm.user.location.lat" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Public Description</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Public Description" ng-model="vm.user.description.public" required></textarea>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Private Description</label>
+                        <div class="control">
+                            <textarea class="textarea" placeholder="Private Description" ng-model="vm.user.description.private" required></textarea>
+                        </div>
+                    </div>
+
+                    <footer class="modal-card-foot">
+                        <input class="button is-success" type="submit" id="submit" value="Submit" />
+                        <button class="button" ng-click="vm.hideModal()">Cancel</button>
+                    </footer>
+
+                </form>
+            </section>
+        </div>
+    </div>
+
+</div>

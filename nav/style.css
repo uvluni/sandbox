@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.logo {
+  width: 120px;
+  margin: 0 10px;
+}
+
+.nav-items {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  margin: 10px;
+  padding-left: 0;
+}
+
+.nav-items li {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.dashboard::before {
+  position: absolute;
+  display: block;
+  top: 15px;
+  content: 'YOUR';
+  color: #89dcff;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.pens::before {
+  position: absolute;
+  display: block;
+  top: 15px;
+  content: 'EXPLORE';
+  color: #f4e17f;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.social {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 0;
+  margin: 10px;
+}
+
+.social li {
+  padding: 0 5px;
+  color: #929292;
+}
+
+.social li span {
+  font-size: 0.8rem;
+  background: rgb(255, 187, 0);
+  border-radius: 3px;
+  color: black;
+  padding: 0 1px;
+  top: 10px;
+  font-weight: bold;
+}
+
+.nav-actions {
+  flex: 1;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  padding-left: 0;
+}
+
+.nav-actions > * {
+  margin: 0 5px;
+}
+
+.create {
+  background: none;
+  border: none;
+  display: flex;
+  background: rgb(83, 83, 83);
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  align-items: center;
+  padding: 9px 10px;
+}
+
+.create:hover {
+  background: #4c4749;
+}
+
+.create > i {
+  padding-left: 10px;
+  color: rgb(0, 202, 0);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.avatar > img {
+  width: 44px;
+  height: 44px;
+  border-radius: 5px;
+  margin-bottom: -4px;
+}

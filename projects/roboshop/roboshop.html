@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>The Geeky Shop</title>
+</head>
+
+<body>
+    <header>
+        <h1>The Geeky Shop for Geeks</h1>
+    </header>
+    <div id="shop">
+        <div id="shop-window">
+            <section id="product-list"></section>
+        </div>
+        <section id="cart-list">
+            <table id="cart">
+                <tr>
+                    <th>Product</th>
+                    <th>QTY</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th id="total-title">Total:</th>
+                    <th id="sub-qty">0</th>
+                    <th></th>
+                    <th id="sub-total">0</th>
+                </tr>
+            </table>
+
+            <img src="images/paypal.png" id="paypal_btn"></img>
+
+            <!--<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_cart">
+                <input type="hidden" name="upload" value="1">
+                <input type="hidden" name="business" value="ronny@hoojima.com">
+
+                <input type="hidden" name="item_name_1" value="Item Name 1">
+                <input type="hidden" name="amount_1" value="1.00">
+                <input type="hidden" name="quantity_1" value="6">
+
+                <input type="hidden" name="item_name_2" value="Item Name 2">
+                <input type="hidden" name="amount_2" value="2.00">
+                <input type="hidden" name="quantity_2" value="3">
+
+                <input type="submit" value="PayPal">
+            </form>-->
+
+        </section>
+    </div>
+
+
+
+
+
+    <footer class="show">Scroll for more products</footer>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script src="scripts/script.js"></script>
+    <!--<script src="scripts/products.js"></script>-->
+</body>
+
+</html>

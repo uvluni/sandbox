@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    margin: 0 10px 10px 10px;
+}
+
+.details_container {
+    flex: 2;
+    padding: 0 30px 30px 30px;
+}
+
+.book_container {
+    flex: 1;
+    padding: 30px;
+    z-index: 1;
+}
+
+.sticky {
+    z-index: 100;
+}

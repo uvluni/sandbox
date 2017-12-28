@@ -1,0 +1,42 @@
+.locationsList {
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: stretch;
+    justify-content: center;
+
+    height: 100%;
+}
+
+.locationsList > a {
+    width: 30%;
+    overflow: hidden;
+    margin: 1em;
+    text-decoration: none;
+}
+
+.locationsList > a > img {
+    width: 100%;
+}
+
+.hideLocationsList {
+    display: none;
+}
+
+.price {
+    font-size: 1.5em;
+}
+
+.locations_wrap > * {
+    color: #333;
+    margin: 0em 0em 0.5em 0em;
+}
+
+.locations_wrap > h3 {
+    letter-spacing: 0.05em;
+    font-size: 1.3em;
+}
+
+.locations_wrap > h4 {
+    letter-spacing: 0.05em;
+}

@@ -1,0 +1,30 @@
+.main {
+    display: flex;
+    border-bottom: 1px solid #505050;
+}
+
+.description > * {
+    margin-bottom: 2em;
+}
+
+.details {
+    flex: 2;
+}
+
+.owner {
+    margin-top: 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.owner_img {
+    border-radius: 50%;
+}
+
+.about > span:not(:last-child) {
+    padding-right: 1.5em;
+}
+
+.the_space > span:not(:first-child) {
+    padding-left: 5em;
+}

@@ -1,0 +1,15 @@
+<div class="columns">
+    <div class="column" ng-repeat="field in vm.job track by $index">{{:: field}}</div>
+    <div class="column">
+        <button class="button is-primary is-small" ng-click="vm.detailsClicked()">Details</button>
+
+        <button class="button is-primary is-small" ng-disabled="vm.btnClicked" ng-click="vm.clickFunc(); vm.btnClick()">{{vm.btnName}}</button>
+
+    </div>
+</div>
+
+<div class="columns">
+    <div class="column">
+        <job-details ng-if="vm.showDetails" details="vm.details"></job-details>
+    </div>
+</div>
