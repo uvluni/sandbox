@@ -1,0 +1,50 @@
+var funcVars = [];
+
+////////// The problem //////////
+
+// for (var i=0; i<5;++i){
+//   funcVars.push( function(){
+//     console.log('num: '+i);
+//   });
+// }
+
+////////// Solution 1 //////////
+
+// for (var i = 0; i < 5; ++i) {
+//   (function(x) {
+//     funcVars.push(function () {
+//       console.log('num: ' + x)
+//     })
+//   })(i);
+// }
+
+////////// Solution 2 //////////
+
+// for (var i = 0; i < 5; ++i) {
+//   funcVars.push(function (x) {
+//     return function () {
+//       console.log('num: ' + x)
+//     }
+//   }(i));
+// }
+
+////////// Solution 3 //////////
+
+// for (var i = 0; i < 5; ++i) {
+//    funcVars.push (function () {
+//      console.log('num: ' + this.x);
+//    }.bind({x:i}));
+// }
+
+////////// Solution 4 //////////
+////////// LET - ES6 ///////////
+for (let i=0; i<5;++i){
+  funcVars.push( function(){
+    console.log('num: '+i);
+  });
+}
+
+////////////////////////////////
+
+funcVars[2]();
+

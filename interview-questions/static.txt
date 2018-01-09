@@ -1,0 +1,107 @@
+
+// function Point(x,y) {
+//   if (x === undefined) {
+//     x = 0;
+//   }
+//   if (y === undefined) {
+//     y = 0;
+//   }
+//   this.x = x;
+//   this.y = y;
+// }
+
+// Point.prototype.distance = function() {
+//   return Math.sqrt( this.x*this.x + this.y*this.y);
+// };
+
+
+class Point {
+	constructor(x=0, y=0) {
+		this.x = x;
+		this.y = y;
+	}
+	distance() {
+		return Math.sqrt( this.x*this.x + this.y*this.y);
+	}
+}
+
+var pt = new Point(3,4);
+console.log( pt.distance() );
+
+
+class Circle extends Point {
+	constructor(r=1, x, y) {
+		super(x,y);
+		this.radius = r;
+	}
+	isContainingOrigin() {
+		return this.distance() < this.radius;
+	}
+}
+
+var near = new Circle(6, 3, 4);
+console.log( near.isContainingOrigin() );
+
+/////////////////////////////////////////////
+
+class MyCoolArray extends Array {
+	first() { return this[0]; }
+	last() { return this[this.length - 1]; }
+}
+var a = new MyCoolArray( 1111, 2222, 3333 );
+console.log( a );
+console.log( a.length );
+console.log( a.first() );
+console.log( a.last() ); 
+
+/////////////////////////////////////////////
+
+class Base {
+	constructor() {
+		this.className = new.target.name;
+	}
+}
+
+
+class Derived extends Base {
+	constructor() {
+		super();
+		console.log( new.target.name );
+	}
+	func() {
+		console.log( new.target.name );
+	}
+}
+
+var b = new Base();
+console.log( b.className );
+
+var d = new Derived();
+console.log( d.className );
+//d.func();
+
+////////////////////////////////////////
+
+class Book {
+	constructor(name, last) {
+		this.name = name;
+		this.last = last;
+	}
+	getName() {
+		return this.name;
+	}
+	getLast() {
+		return this.last;
+	}
+	static getStaticName() {
+		return "Ronny";
+	}
+}
+
+var b = new Book('Moby', 'Dick');
+console.log(b.getName());
+console.log(b.getLast());
+console.log(Book.getStaticName());
+
+
+

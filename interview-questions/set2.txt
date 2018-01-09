@@ -1,0 +1,16 @@
+// Binary tree left-right swap
+
+function reverseTree(node) {
+	if (node === null) {
+		return
+	}
+	var temp = node.left;
+	node.left = node.right;
+	node.right = temp;
+	reverseTree(node.left);
+	reverseTree(node.right);
+}
+
+
+
+

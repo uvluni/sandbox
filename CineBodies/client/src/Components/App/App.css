@@ -1,0 +1,13 @@
+body{
+  background: linear-gradient(top, rgb(23, 10, 71) 30%, rgb(5, 1, 43) 50%, rgb(0, 5, 22) 100%);
+  
+}
+.container {
+  display: grid;
+  width: 90vw;
+  max-width : 1000px; 
+  max-height : 850px; 
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:  repeat(12, 1fr);
+  margin: 0 auto;
+}
