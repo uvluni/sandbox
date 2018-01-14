@@ -1,0 +1,10 @@
+.item {
+    grid-row: 2 / 11 ;
+    grid-column: 4 / 13  ;
+}
+
+.gallery_container{
+    text-align: center;
+    background: yellow;
+}
+  
