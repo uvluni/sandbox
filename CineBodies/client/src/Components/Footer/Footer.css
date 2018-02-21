@@ -1,0 +1,11 @@
+.item {
+    grid-row: 12 / 13 ;
+    grid-column: 1 / 13  ;
+}
+
+.footer{
+    text-align: center;
+    background: linear-gradient(top, #2C1780 0%, #0E0647 50%, #0B1642 100%);
+    
+}
+  
